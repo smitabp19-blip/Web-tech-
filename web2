@@ -1,0 +1,363 @@
+Paper 1 — Q2: College/School Registration Form
+Aim: Design a College/S
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 550px;
+            max-width: 90%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffdf;
+            border-radius: 10px;
+        }
+
+        h2, p {
+            text-align: center;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 10px;
+            align-items: center;
+            margin: 12px 0;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="file"]),
+        select, textarea {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        button {
+            padding: 8px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>My-Future College / School</h2>
+    <p>Please Fill Below Details in Student Registration Form</p>
+
+    <form>
+        <div class="form-row">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name"
+                   minlength="3" maxlength="10"
+                   pattern="[A-Za-z ]{3,10}"
+                   title="Enter 3 to 10 letters"
+                   required>
+        </div>
+
+        <div class="form-row">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-row">
+            <label for="mobile">Mobile No.:</label>
+            <input type="tel" id="mobile" name="mobile"
+                   pattern="[0-9]{10}"
+                   maxlength="10"
+                   placeholder="10 digit mobile number"
+                   required>
+        </div>
+
+        <div class="form-row">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   minlength="8" required>
+        </div>
+
+        <div class="form-row">
+            <label>Gender:</label>
+            <div class="options">
+                <label><input type="radio" name="gender"
+                       value="Male" required> Male</label>
+                <label><input type="radio" name="gender"
+                       value="Female"> Female</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label>Hobbies:</label>
+            <div class="options">
+                <label><input type="checkbox" name="hobby"
+                       value="Drawing"> Drawing</label>
+                <label><input type="checkbox" name="hobby"
+                       value="Singing"> Singing</label>
+                <label><input type="checkbox" name="hobby"
+                       value="Dancing"> Dancing</label>
+                <label><input type="checkbox" name="hobby"
+                       value="Sketch"> Sketch</label>
+                <label><input type="checkbox" name="hobby"
+                       value="Sports"> Sports</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select Admission Course</option>
+                <option value="BSc CS">B.Sc. Computer Science</option>
+                <option value="BCA">BCA</option>
+                <option value="BCom">B.Com</option>
+                <option value="BA">B.A.</option>
+                <option value="BSc">B.Sc.</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="photo">Student Photo:</label>
+            <input type="file" id="photo" name="photo"
+                   accept="image/*" required>
+        </div>
+
+        <div class="form-row">
+            <label for="time">Register Time:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+
+        <div class="form-row">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"
+                      rows="3" required></textarea>
+        </div>
+
+        <p>
+            <label>
+                <input type="checkbox" required>
+                I hereby declare that the above information is correct.
+            </label>
+        </p>
+
+        <div class="buttons">
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+
+
+
+Q2: Student Registration Form
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+        }
+
+        .container {
+            width: 600px;
+            max-width: 92%;
+            margin: 25px auto;
+            padding: 20px;
+            background-color: #ffe5e2;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 125px 1fr;
+            gap: 10px;
+            align-items: center;
+            margin: 12px 0;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="file"]),
+        select, textarea {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        button {
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+
+        .submit {
+            text-align: center;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Student Registration Form</h2>
+
+    <form>
+        <div class="form-row">
+            <label for="roll">Roll No.:</label>
+            <input type="text" id="roll" name="roll"
+                   pattern="[0-9]+" required>
+        </div>
+
+        <div class="form-row">
+            <label for="fname">Student Name:</label>
+            <div class="options">
+                <input type="text" id="fname" name="fname"
+                       placeholder="First Name"
+                       pattern="[A-Za-z ]{2,30}" required>
+                <input type="text" id="lname" name="lname"
+                       placeholder="Last Name"
+                       pattern="[A-Za-z ]{2,30}" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="father">Father's Name:</label>
+            <input type="text" id="father" name="father"
+                   pattern="[A-Za-z ]{2,50}" required>
+        </div>
+
+        <div class="form-row">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-row">
+            <label for="mobile">Mobile No.:</label>
+            <div class="options">
+                <span>+91</span>
+                <input type="tel" id="mobile" name="mobile"
+                       pattern="[0-9]{10}"
+                       maxlength="10"
+                       placeholder="10 digit number" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   minlength="8" required>
+        </div>
+
+        <div class="form-row">
+            <label>Gender:</label>
+            <div class="options">
+                <label><input type="radio" name="gender"
+                       value="Male" required> Male</label>
+                <label><input type="radio" name="gender"
+                       value="Female"> Female</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label>Department:</label>
+            <div class="options">
+                <label><input type="checkbox" name="department"
+                       value="CSE"> CSE</label>
+                <label><input type="checkbox" name="department"
+                       value="IT"> IT</label>
+                <label><input type="checkbox" name="department"
+                       value="ECE"> ECE</label>
+                <label><input type="checkbox" name="department"
+                       value="Civil"> Civil</label>
+                <label><input type="checkbox" name="department"
+                       value="Mechanical"> Mech</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select Current Course</option>
+                <option value="BSc CS">B.Sc. Computer Science</option>
+                <option value="BCA">BCA</option>
+                <option value="BSc IT">B.Sc. IT</option>
+                <option value="BCom">B.Com</option>
+                <option value="BA">B.A.</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="photo">Student Photo:</label>
+            <input type="file" id="photo" name="photo"
+                   accept="image/*" required>
+        </div>
+
+        <div class="form-row">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+
+        <div class="form-row">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"
+                      rows="3" required></textarea>
+        </div>
+
+        <div class="submit">
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+
+
